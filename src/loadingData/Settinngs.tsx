@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Settings() {
   return (
@@ -18,7 +18,7 @@ function Settings() {
           User
         </NavLink>
       </nav>
-      <Outlet />
+      <p className="instruction">Napraw, aby przekierowania zadziałały</p>
     </div>
   );
 }

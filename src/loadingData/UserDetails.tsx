@@ -1,28 +1,18 @@
-import { useLoaderData, useLocation } from "react-router-dom";
+import "./componentStyle.css";
 
-type User = {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
-};
+// type User = {
+//   id: number;
+//   name: string;
+//   email: string;
+//   phone: string;
+// };
 
 function UserDetails() {
-  const user = useLoaderData() as User;
-  const location = useLocation();
-
   return (
     <div>
       <h2>User Details</h2>
-      <p>ID: {user.id}</p>
-      <p>Name: {user.name}</p>
-      <p>Email: {user.email}</p>
-      <p>Phone: {user.phone}</p>
-      {location.state && (
-        <p>
-          <em>Dane state: {JSON.stringify(location.state)}</em>
-        </p>
-      )}
+      <p className="instruction">Odczytaj dane z loadera i zaprezentuj je na stronie</p>
+      <p className="instruction">Jeśli zostały przekazane, pobierz i zaprezentuj dane z ze stanu routera</p>
     </div>
   );
 }
